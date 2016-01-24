@@ -1,0 +1,103 @@
+<!-- This is the master template for the thunder talk. -->
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Web Template">
+  <meta name="author" content="Trevor Newcomb and Mia Lehrer">
+  <!-- Bootstrap CSS file -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <title> Trevor and Mia's THUNDER TALK </title>
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">THUNDER TALK</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Thunder</a></li>
+          <li><a href="#">And</a></li>
+          <li><a href="#">Lightning</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <input type="text" class="form-control" placeholder="Searching in vain">
+        </form>
+      </div>
+    </div>
+  </nav>
+  <body>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li><a href="#">These</a></li>
+          <li><a href="#">Are</a></li>
+          <li><a href="#">Some</a></li>
+          <li><a href="#">Other</a></li>
+          <li><a href="#">Links</a></li>
+        </ul>
+      </div>
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+
+          <!-- Side menu toggle button -->
+
+          <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+          <div class="row">
+            <div class="col-lg-12">
+              <h1>Here's where you could put some text.</h1>
+              <p class="lead">This is some more important text.</p>
+
+              <p>This here is the body text..</p>
+
+              <p class="text-right">
+                <a href="#" class="text-right">
+                  This is a link to continue reading...
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+
+    </div>
+
+<!-- Script to toggle side menu -->
+
+    <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+  </body>
+
+<!-- Footer -->
+
+  <div class="nav-margin navbar navbar-inverse navbar-fixed-bottom text-center">
+    <p class="footer-text">Here's some footer stuff.</p>
+
+<!-- Contact Info -->
+
+    <p class="footer-text">Contact information: <a href="mailto:tnewcomb0@gmail.com">tnewcomb0@gmail.com</a></p>
+  </div>
+  </html>
