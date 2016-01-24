@@ -16,6 +16,8 @@ body {
 
 /* Toggle Styles */
 
+/*The ease will cause the transition to happen over time instead of instantaneously*/
+
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -23,6 +25,8 @@ body {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
+
+/*The toggled class will cause the content in the wrapper to move over to not be hidden by the menu*/
 
 #wrapper.toggled {
     padding-left: 250px;
@@ -107,6 +111,8 @@ body {
     color: #fff;
     background: none;
 }
+
+/*this is to display the content differently on different screen sizes*/
 
 @media(min-width:768px) {
     #wrapper {
