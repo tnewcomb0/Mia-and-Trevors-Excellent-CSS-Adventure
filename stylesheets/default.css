@@ -17,7 +17,7 @@ body {
 /* Toggle Styles */
 
 /*The ease will cause the transition to happen over time instead of instantaneously*/
-
+/*The 4 different transitions are for different browsers*/
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
