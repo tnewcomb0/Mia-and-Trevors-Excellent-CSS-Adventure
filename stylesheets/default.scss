@@ -1,3 +1,25 @@
+/*Still need to remove the code in here that the partial now has, after we make these files real scss*/
+/*Still want to add in an inheritance example and a math example*/
+
+/*This is how you import the partial*/
+
+@import 'sidebar_nav';
+
+/*There are the variables we will be using throughout the scss*/
+
+$primary-color: #333;
+$secondary-color: #999999;
+$sidebar-padding: 250px;
+
+/*This is a mix-in, which is very helpful for when you have vendor prefixes, ie the way you make the css work on all the browsers*/
+
+@mixin border-radius($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
 body {
   margin-top: 70px;
   padding-bottom: 70px;
@@ -16,40 +38,33 @@ body {
 
 /* Toggle Styles */
 
-/*The ease will cause the transition to happen over time instead of instantaneously*/
-/*The 4 different transitions are for different browsers*/
 #wrapper {
     padding-left: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    @include transition(all 0.5s ease);
 }
 
 /*The toggled class will cause the content in the wrapper to move over to not be hidden by the menu*/
 
 #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: $sidebar-padding;
 }
+
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 250px;
+    left: $sidebar-padding;
     width: 0;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
     background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    @include transition(all 0.5s ease);
     margin-top: -20px;
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: $sidebar-padding;
 }
 
 #page-content-wrapper {
@@ -68,7 +83,7 @@ body {
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: $sidebar-padding;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -83,12 +98,12 @@ body {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: $secondary-color;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
+    color: $primary-color;
     background: rgba(255,255,255,0.2);
 }
 
@@ -104,11 +119,11 @@ body {
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #999999;
+    color: $secondary-color;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
+    color: $primary-color;
     background: none;
 }
 
@@ -116,7 +131,7 @@ body {
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 250px;
+        padding-left: $sidebar-padding;
     }
 
     #wrapper.toggled {
