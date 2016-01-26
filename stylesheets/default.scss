@@ -14,7 +14,7 @@ $sidebar-padding: 250px;
 
 /*This is a mix-in, which is very helpful for when you have vendor prefixes, ie the way you make the css work on all the browsers*/
 
-@mixin border-radius($transition) {
+@mixin transition($transition) {
   -webkit-transition: $transition;
   -moz-transition: $transition;
   -o-transition: $transition;
